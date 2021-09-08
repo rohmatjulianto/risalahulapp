@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Risalatul Mahid </string>
+    <string name="pertanyaan">Pertanyaan</string>
+    <string name="penjelasan">Penjelasan</string>
+    <string name="qadha_shalat">Qadha Shalat</string>
+    <string name="hitung">Hitung Haid</string>
+    <string name="login">Login</string>
+    <string name="judul_login">LOGIN</string>
+    <string name="status">Status</string>
+    <string name="daftarlogin">Daftar</string>
+    <string name="loginlogin">Login</string>
+    <string name="edtpassword">Password</string>
+    <string name="edtusername">Username</string>
+    <string name="logout">logout</string>
+    <string name="tangal_awal_haid">Tangal awal haid :</string>
+    <string name="hitung_shalat_yang_diqadha">Hitung Shalat yang diqadha</string>
+    <string name="waktu_keluarnya_darah">Waktu Keluarnya darah :</string>
+    <string name="waktu_berhentinya_darah">Waktu berhentinya darah :</string>
+    <string name="hasil_shalat">hasil</string>
+    <string name="hasil_haid">hasil</string>
+    <string name="tanggal_berhentinya_darah">Tanggal berhentinya darah :</string>
+    <string name="hitung_kasus_haid_dan_istihadhah">Hitung Kasus Haid dan Istihadhah</string>
+    <string name="daftar">Daftar</string>
+    <string name="waktu_bersuci">Waktu bersuci :</string>
+    <string name="kitab">Kitab</string>
+    <string name="menu">Menu</string>
+    <string name="selamat_datang_di_risalatul_mahid">Selamat datang di MUSQUE</string>
+    <string name="cek_status">Cek Status</string>
+    <string name="update_akun">Update Akun</string>
+</resources>

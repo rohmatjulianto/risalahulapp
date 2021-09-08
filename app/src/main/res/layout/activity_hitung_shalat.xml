@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3EDED"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+    <LinearLayout
+        android:id="@+id/liner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="2dp"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/radius"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Hitung Sholat Yang Di Qadha"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/liner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/liner1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/bg_register"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/waktu_keluarnya_darah"
+            android:textColor="@color/pink"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp" />
+        <RadioGroup
+            android:id="@+id/radioKeluarDarah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <RadioButton
+                android:id="@+id/rbtnSubuh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subuh"
+                android:checked="true"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/pink"
+                />
+
+            <RadioButton
+                android:id="@+id/rbtnduhur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dzuhur"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/pink"
+                />
+
+            <RadioButton
+                android:id="@+id/rbtnAshar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asar"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/pink"
+                />
+
+            <RadioButton
+                android:id="@+id/rbtnMagrib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maghrib"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/pink"
+                />
+
+            <RadioButton
+                android:id="@+id/rbtnIsyak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Isya"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/pink"
+                />
+        </RadioGroup>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/waktu_berhentinya_darah"
+            android:textColor="@color/pink"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="15sp" />
+
+        <RadioGroup
+            android:id="@+id/radioBerhentiDarah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <RadioButton
+                android:id="@+id/rbtnSubuh1"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:checked="true"
+                android:layout_height="wrap_content"
+                android:text="Subuh"
+                android:textColor="@color/pink"
+                />
+
+            <RadioButton
+                android:id="@+id/rbtnduhur1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Dzuhur"
+                android:textColor="@color/pink"
+                />
+
+            <RadioButton
+                android:id="@+id/rbtnAshar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Asar"
+                android:textColor="@color/pink" />
+
+            <RadioButton
+                android:id="@+id/rbtnMagrib1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maghrib"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/pink"
+                />
+
+            <RadioButton
+                android:id="@+id/rbtnIsyak1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Isya"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/pink"
+                />
+
+        </RadioGroup>
+        <Button
+            android:id="@+id/btnCek"
+            android:text="@string/cek_status"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/pink"/>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linerHasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/liner2"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:padding="10dp"
+            android:background="@drawable/bg_register">
+            <TextView
+                android:id="@+id/jdhasil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hasil : "
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/pink"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/hasil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:layout_marginLeft="10dp"
+                android:text="hasil"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/pink"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/hasil2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:layout_marginLeft="10dp"
+                android:text="hasil"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/pink"
+                android:textSize="17sp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "219779804757",
+    "firebase_url": "https://risalatul-apps-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "risalatul-apps",
+    "storage_bucket": "risalatul-apps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219779804757:android:cbcb3567af33cf8ea22edc",
+        "android_client_info": {
+          "package_name": "com.example.a1183008"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219779804757-sut5frrlr3j3huol0v4o0o05khna9ka1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.a1183008",
+            "certificate_hash": "7494cbc8f561b970f6bf649ac9f2843f466bac81"
+          }
+        },
+        {
+          "client_id": "219779804757-e97kdq8fqv9eo51vqqac4ut5th5bc1cv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0fkEnvl5YQr6QZSjVBUrMSlE6Ik60bg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219779804757-e97kdq8fqv9eo51vqqac4ut5th5bc1cv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

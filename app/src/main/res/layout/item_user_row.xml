@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:id="@+id/rela"
+    android:background="@drawable/border_shape_item"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:id="@+id/user_image"
+            android:background="@null"
+            android:src="@drawable/ic_woman"
+            app:civ_border_color="@color/pink"
+            app:civ_border_width="2dp"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="-25dp"
+            android:layout_marginTop="50sp"
+            app:civ_border_width="10sp"
+            app:civ_border_color="#05df29"
+            android:visibility="gone"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/img_online"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="-25dp"
+            android:layout_marginTop="50dp"
+            app:civ_border_width="10dp"
+            app:civ_border_color="#919392"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/img_offline"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="Name"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/last_msg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:text="last msg"
+                android:fontFamily="@font/poppins"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/arrow"
+        android:src="@drawable/ic_chevron_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        />
+
+</RelativeLayout>
