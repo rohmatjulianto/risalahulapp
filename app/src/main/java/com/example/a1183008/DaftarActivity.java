@@ -95,11 +95,13 @@ public class DaftarActivity extends AppCompatActivity {
         String sUsername = username.getText().toString();
         String sPassword = password.getText().toString();
         String sEmail = email.getText().toString();
+        String emailFire = sUsername + "@gmail.com";
 
         dialog = new ProgressDialog(this);
         dialog.setMessage("Proses mendaftar...");
         dialog.setCancelable(false);
         dialog.show();
+
 
         Call<List<ModelRegister>> register = Api.service().TambahRespon(sNama, sUsername,sPassword, sEmail);
         register.enqueue(new Callback<List<ModelRegister>>() {
@@ -109,7 +111,7 @@ public class DaftarActivity extends AppCompatActivity {
                     Toast.makeText(DaftarActivity.this, "Username sudah terdaftar", Toast.LENGTH_SHORT).show();
                     dialog.cancel();
                 }else {
-                    auth.createUserWithEmailAndPassword(sEmail, sPassword)
+                    auth.createUserWithEmailAndPassword(emailFire, sPassword)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {

@@ -112,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
         dialog.setMessage("Proses login...");
         dialog.setCancelable(false);
         dialog.show();
-        String sEmail = usernames + "@email.com";
+        String sEmail = usernames + "@gmail.com";
 
         Call<List<ModelLogin>> cekData = Api.service().getLogin(usernames, passwords);
         cekData.enqueue(new Callback<List<ModelLogin>>() {
@@ -166,7 +166,7 @@ public class LoginActivity extends AppCompatActivity {
                                             dialog.cancel();
                                             finish();
                                         } else {
-                                            Toast.makeText(LoginActivity.this, "Authentication failed!", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(LoginActivity.this, "Authentication failed!"+ task.getException(), Toast.LENGTH_SHORT).show();
                                             dialog.cancel();
                                         }
                                     }
