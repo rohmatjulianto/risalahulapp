@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/edtusername"
+            android:text="Email"
             android:fontFamily="@font/poppins"
             android:textColor="@color/pink"
             android:textSize="17sp"/>
@@ -39,6 +39,7 @@
             android:id="@+id/edt_usernamelogin"
             android:layout_width="match_parent"
             android:textColor="@color/pink"
+            android:inputType="textEmailAddress"
             android:layout_height="wrap_content"/>
 
         <TextView
@@ -86,8 +87,7 @@
             android:textAlignment="textEnd"
             android:text="Lupa password?"
             android:fontFamily="@font/poppins"
-            android:textColor="@color/pink"
-            android:textSize="17sp" />
+            android:textColor="@color/teal_700" />
     </LinearLayout>
 
 </LinearLayout>

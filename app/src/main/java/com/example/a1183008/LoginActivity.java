@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
         tvLupa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 startActivity(new Intent(LoginActivity.this, ForgotActivity.class));
+                startActivity(new Intent(LoginActivity.this, ForgotActivity.class));
             }
         });
 
@@ -99,11 +99,12 @@ public class LoginActivity extends AppCompatActivity {
 
     public void CheckLogin(final String usernames, final String passwords) {
         if (usernames.isEmpty()) {
-            username.setError("Username tidak boleh kosong!");
+            username.setError("Email tidak boleh kosong!");
         } else if (passwords.isEmpty()) {
             password.setError("Password tidak boleh kosong!");
         } else {
-            prosesLogin(usernames, passwords);
+//            prosesLogin(usernames, passwords);
+            login(usernames, passwords);
         }
     }
 
@@ -166,7 +167,7 @@ public class LoginActivity extends AppCompatActivity {
                                             dialog.cancel();
                                             finish();
                                         } else {
-                                            Toast.makeText(LoginActivity.this, "Authentication failed!"+ task.getException(), Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(LoginActivity.this, "Authentication failed!" + task.getException(), Toast.LENGTH_SHORT).show();
                                             dialog.cancel();
                                         }
                                     }
@@ -190,5 +191,26 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    void login(String email, String pass) {
+        dialog = new ProgressDialog(this);
+        dialog.setMessage("Proses login...");
+        dialog.setCancelable(false);
+        dialog.show();
+
+        auth.signInWithEmailAndPassword(email, pass)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            dialog.cancel();
+                            finish();
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Gagal, Email atau Password salah", Toast.LENGTH_SHORT).show();
+                            dialog.cancel();
+                        }
+                    }
+                });
+    }
 
 }

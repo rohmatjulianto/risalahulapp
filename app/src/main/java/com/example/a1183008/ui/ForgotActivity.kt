@@ -1,6 +1,5 @@
 package com.example.a1183008.ui
 
-import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -15,23 +14,28 @@ import com.example.a1183008.LoginActivity
 import com.example.a1183008.Model.ForgotPassResponse
 import com.example.a1183008.R
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 
 class ForgotActivity : AppCompatActivity() {
+    var pbar: ProgressBar? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot)
 
         val email = findViewById<EditText>(R.id.edt_email)
         val btn = findViewById<Button>(R.id.bt_submit)
-        val pbar = findViewById<ProgressBar>(R.id.pb_bar)
+        pbar = findViewById<ProgressBar>(R.id.pb_bar)
 
         btn.setOnClickListener{
             if (!email.text.isEmpty()){
-                getReset(pbar, email)
+                pbar?.visibility = View.VISIBLE
+//                getReset(pbar, email)
+                resetFire(email.text.toString())
             }else{
                 email.error = "Email belum diisi"
             }
@@ -60,6 +64,22 @@ class ForgotActivity : AppCompatActivity() {
             }
 
         })
+    }
+
+    fun resetFire(email: String){
+        val firebase = FirebaseAuth.getInstance()
+        firebase.sendPasswordResetEmail(email)
+                .addOnCompleteListener{
+                    if (it.isSuccessful){
+                        pbar?.visibility = View.GONE
+                        showSnakBar("Reset password berhasil, silahkan periksa email anda")
+                        startActivity(Intent(this@ForgotActivity, LoginActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+                    }else{
+
+                        showSnakBar("Reset password gagal, silahkan ulangi kembali ${it.exception}")
+                        pbar?.visibility = View.GONE
+                    }
+                }
     }
 
     fun showSnakBar(msg: String){

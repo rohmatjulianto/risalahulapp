@@ -43,8 +43,9 @@ public class AdminKitabActivity extends AppCompatActivity {
                 finish();
             }
         });
-        prosesUser();
+//        prosesUser();
 
+//        nama.setText("Hai " +  + " !");
 
         kitab.setOnClickListener(new View.OnClickListener() {
             @Override

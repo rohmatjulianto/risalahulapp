@@ -69,7 +69,7 @@ public class HalamanGuruActivity extends AppCompatActivity implements OnItemClic
         final TabLayout tabLayout = findViewById(R.id.tab_layout);
         final ViewPager viewPager = findViewById(R.id.view_pager);
 
-        prosesUser();
+//        prosesUser();
 
         //taampil user
         reference = FirebaseDatabase.getInstance().getReference("Chats");

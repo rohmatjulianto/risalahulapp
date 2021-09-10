@@ -95,7 +95,7 @@ public class DaftarActivity extends AppCompatActivity {
         String sUsername = username.getText().toString();
         String sPassword = password.getText().toString();
         String sEmail = email.getText().toString();
-        String emailFire = sUsername + "@gmail.com";
+        String emailFire = sEmail;
 
         dialog = new ProgressDialog(this);
         dialog.setMessage("Proses mendaftar...");

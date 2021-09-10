@@ -82,7 +82,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 finish();
             }
         });
-        prosesUser();
+//        prosesUser();
+        nama.setText("Hai " + firebaseUser.getEmail() + " !");
 
     }
 
