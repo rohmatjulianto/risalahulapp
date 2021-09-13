@@ -108,7 +108,7 @@ public class DaftarActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<ModelRegister>> call, Response<List<ModelRegister>> response) {
                 if(response.body().get(0).getStatus().equals("akunudahada")){
-                    Toast.makeText(DaftarActivity.this, "Username sudah terdaftar", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DaftarActivity.this, "Username atau email sudah terdaftar", Toast.LENGTH_SHORT).show();
                     dialog.cancel();
                 }else {
                     auth.createUserWithEmailAndPassword(emailFire, sPassword)
